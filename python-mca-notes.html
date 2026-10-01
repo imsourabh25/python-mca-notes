@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MCA Python Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px;
+      background: #f7f7f7;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px 50px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    }
+    h1, h2, h3, h4 {
+      color: #0b3d91;
+      page-break-after: avoid;
+    }
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    h2 {
+      background: #eaf2ff;
+      padding: 10px 14px;
+      border-left: 6px solid #0b3d91;
+      margin-top: 30px;
+      margin-bottom: 14px;
+    }
+    h3 {
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+    p, li {
+      font-size: 16px;
+    }
+    ul, ol {
+      margin-left: 20px;
+    }
+    .box {
+      background: #f5f9ff;
+      border: 1px solid #cfe0ff;
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 16px 0;
+    }
+    .code {
+      background: #111827;
+      color: #f8fafc;
+      padding: 14px 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      white-space: pre-wrap;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+    }
+    th, td {
+      border: 1px solid #d9d9d9;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #eef4ff;
+    }
+    .flow {
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 16px;
+      margin: 18px 0;
+      font-family: Consolas, monospace;
+      white-space: pre-wrap;
+    }
+    .note {
+      color: #0b3d91;
+      font-weight: bold;
+    }
+    @media print {
+      body { background: white; }
+      .page { box-shadow: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>MCA Python Programming Notes</h1>
+    <h2>Unit 1: Computational Thinking & Algorithmic Logic</h2>
+
+    <h3>1.1 Introduction to Programming and Computational Thinking</h3>
+    <p>Programming means giving a set of instructions to a computer so that it can perform a task. A computer cannot think on its own; it follows the instructions carefully.</p>
+
+    <div class="box">
+      <strong>Examples:</strong><br>
+      - Add two numbers<br>
+      - Search data in a file<br>
+      - Arrange marks in order<br>
+      - Create monthly bill calculations
+    </div>
+
+    <p><strong>Computational thinking</strong> means solving a problem in a structured and logical way. It helps us think like a programmer.</p>
+
+    <ul>
+      <li><strong>Decomposition:</strong> Break a big problem into smaller parts</li>
+      <li><strong>Pattern Recognition:</strong> Find similar repeated parts</li>
+      <li><strong>Abstraction:</strong> Focus only on important details</li>
+      <li><strong>Algorithm Design:</strong> Create step-by-step solution</li>
+    </ul>
+
+    <h3>Building Blocks of Logic</h3>
+    <table>
+      <tr><th>Concept</th><th>Meaning</th><th>Example</th></tr>
+      <tr><td>Sequence</td><td>Steps happen one after another</td><td>Read input, do calculation, print result</td></tr>
+      <tr><td>Selection</td><td>Choose a path using condition</td><td>If marks >= 40, print Pass</td></tr>
+      <tr><td>Iteration</td><td>Repeat steps again and again</td><td>Loop from 1 to 10</td></tr>
+      <tr><td>Input/Output</td><td>Take input and show output</td><td>name = input(...)</td></tr>
+    </table>
+
+    <h3>Problem Analysis</h3>
+    <p>Before writing code, we must understand the problem clearly.</p>
+    <ol>
+      <li>Read the problem carefully</li>
+      <li>Identify input and output</li>
+      <li>Understand the conditions and rules</li>
+      <li>Find the logic</li>
+      <li>Write steps and code</li>
+    </ol>
+
+    <div class="box">
+      <strong>Example:</strong> Find the largest of three numbers.<br>
+      Input: a, b, c<br>
+      Process: compare values<br>
+      Output: largest value
+    </div>
+
+    <h3>Algorithm Design</h3>
+    <p>An <strong>algorithm</strong> is a step-by-step procedure to solve a problem.</p>
+
+    <p><strong>Characteristics of a good algorithm:</strong></p>
+    <ul>
+      <li>Clear and understandable</li>
+      <li>Finite number of steps</li>
+      <li>Precise and unambiguous</li>
+      <li>Produces correct output</li>
+    </ul>
+
+    <div class="code">Algorithm to add two numbers:
+1. Start
+2. Read a and b
+3. Calculate sum = a + b
+4. Display sum
+5. Stop</div>
+
+    <h3>Flowcharts</h3>
+    <p>A flowchart is a graphical representation of an algorithm. It uses symbols to show steps and decisions.</p>
+
+    <p><strong>Common flowchart symbols:</strong></p>
+    <ul>
+      <li><strong>Oval:</strong> Start/Stop</li>
+      <li><strong>Rectangle:</strong> Process</li>
+      <li><strong>Parallelogram:</strong> Input/Output</li>
+      <li><strong>Diamond:</strong> Decision</li>
+      <li><strong>Arrow:</strong> Flow direction</li>
+    </ul>
+
+    <div class="flow">Start
+  ↓
+Read num
+  ↓
+Is num % 2 == 0?
+  ├── Yes → Print "Even"
+  └── No  → Print "Odd"
+  ↓
+Stop</div>
+
+    <h3>Pseudocode</h3>
+    <p>Pseudocode is a simple, English-like description of logic.</p>
+    <div class="code">BEGIN
+    READ a, b, c
+    IF a > b THEN
+        IF a > c THEN
+            PRINT a
+        ELSE
+            PRINT c
+        ENDIF
+    ELSE
+        IF b > c THEN
+            PRINT b
+        ELSE
+            PRINT c
+        ENDIF
+    ENDIF
+END</div>
+
+    <h3>Tracing / Dry Run</h3>
+    <p>Dry run means running the logic manually, line by line, to check the output.</p>
+
+    <div class="code">a = 5
+b = 7
+c = a + b
+print(c)</div>
+
+    <p><strong>Dry run:</strong></p>
+    <ol>
+      <li>a = 5</li>
+      <li>b = 7</li>
+      <li>c = 12</li>
+      <li>print(c)</li>
+    </ol>
+    <p>Output: <strong>12</strong></p>
+
+    <h3>1.2 Python Basics and Syntax</h3>
+    <p>Python is a simple, readable, high-level programming language. It is easy for beginners and widely used in AI, web development, automation, and data science.</p>
+
+    <p><strong>Features of Python:</strong></p>
+    <ul>
+      <li>Easy syntax</li>
+      <li>Readable code</li>
+      <li>Powerful standard library</li>
+      <li>Cross-platform</li>
+      <li>Large developer community</li>
+    </ul>
+
+    <h3>Variables</h3>
+    <p>A variable stores data in memory.</p>
+    <div class="code">name = "Riya"
+roll_no = 12
+marks = 89.5</div>
+
+    <p>Rules for variable names:</p>
+    <ul>
+      <li>Can contain letters, digits, underscore</li>
+      <li>Cannot start with a digit</li>
+      <li>Cannot use Python keywords</li>
+      <li>Case-sensitive</li>
+    </ul>
+
+    <h3>Data Types</h3>
+    <table>
+      <tr><th>Data Type</th><th>Example</th><th>Description</th></tr>
+      <tr><td>int</td><td>10, 25, 100</td><td>Whole number</td></tr>
+      <tr><td>float</td><td>3.14, 8.0</td><td>Decimal number</td></tr>
+      <tr><td>str</td><td>"Hello"</td><td>Text</td></tr>
+      <tr><td>bool</td><td>True / False</td><td>Boolean value</td></tr>
+      <tr><td>list</td><td>[1, 2, 3]</td><td>Ordered collection</td></tr>
+      <tr><td>tuple</td><td>(1, 2, 3)</td><td>Immutable collection</td></tr>
+      <tr><td>dict</td><td>{"name": "Amit"}</td><td>Key-value pair</td></tr>
+      <tr><td>set</td><td>{1,2,3}</td><td>Unique values</td></tr>
+    </table>
+
+    <h3>Type Casting</h3>
+    <p>Type casting means converting one data type into another.</p>
+    <div class="code">a = "10"
+b = int(a)
+print(b + 5)
+
+x = 25
+s = str(x)
+print(s)</div>
+
+    <p>Common functions:</p>
+    <ul>
+      <li>int()</li>
+      <li>float()</li>
+      <li>str()</li>
+      <li>bool()</li>
+    </ul>
+
+    <h3>Operators</h3>
+    <table>
+      <tr><th>Type</th><th>Examples</th><th>Use</th></tr>
+      <tr><td>Arithmetic</td><td>+, -, *, /, %, **</td><td>Mathematical operations</td></tr>
+      <tr><td>Comparison</td><td>==, !=, >, <</td><td>Compare values</td></tr>
+      <tr><td>Logical</td><td>and, or, not</td><td>Combine conditions</td></tr>
+      <tr><td>Assignment</td><td>=, +=, -=</td><td>Assign value</td></tr>
+      <tr><td>Membership</td><td>in, not in</td><td>Check membership</td></tr>
+      <tr><td>Identity</td><td>is, is not</td><td>Check object identity</td></tr>
+    </table>
+
+    <div class="code">a = 10
+b = 3
+print(a + b)      # 13
+print(a % b)      # 1
+print(a ** b)     # 1000
+print(a > b)      # True</div>
+
+    <h3>Indentation</h3>
+    <p>Python uses indentation to define a block of code.</p>
+    <div class="code">if 5 > 3:
+    print("Five is greater than three")</div>
+
+    <p><strong>Important:</strong> Wrong indentation causes errors.</p>
+
+    <h3>Comments</h3>
+    <div class="code"># Single-line comment
+
+"""
+This is a
+multi-line comment
+"""</div>
+
+    <h3>Input and Output</h3>
+    <div class="code">name = input("Enter your name: ")
+print("Welcome", name)
+
+age = int(input("Enter your age: "))
+print("Your age is", age)</div>
+
+    <p>Note: <strong>input()</strong> always returns a string. Use int(), float(), etc. to convert it.</p>
+
+    <h2>Unit 2: Python Control Flow, Functions & Modules</h2>
+
+    <h3>2.1 Conditional Statements and Loops</h3>
+    <h4>if statement</h4>
+    <div class="code">age = 18
+if age >= 18:
+    print("Adult")</div>
+
+    <h4>if-else</h4>
+    <div class="code">num = 5
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")</div>
+
+    <h4>if-elif-else</h4>
+    <div class="code">marks = 75
+if marks >= 90:
+    grade = "A"
+elif marks >= 75:
+    grade = "B"
+elif marks >= 60:
+    grade = "C"
+else:
+    grade = "D"
+print(grade)</div>
+
+    <h4>for Loop</h4>
+    <p>Used when the number of iterations is known.</p>
+    <div class="code">for i in range(1, 6):
+    print(i)</div>
+
+    <h4>while Loop</h4>
+    <p>Used when the number of iterations depends on a condition.</p>
+    <div class="code">i = 1
+while i <= 5:
+    print(i)
+    i += 1</div>
+
+    <h4>break, continue, pass</h4>
+    <div class="code">for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+
+for i in range(5):
+    pass</div>
+
+    <ul>
+      <li><strong>break:</strong> stop the loop</li>
+      <li><strong>continue:</strong> skip current iteration</li>
+      <li><strong>pass:</strong> do nothing</li>
+    </ul>
+
+    <h3>2.2 Functions</h3>
+    <p>A function is a reusable block of code. It helps to organize programs.</p>
+
+    <div class="code">def add(a, b):
+    return a + b
+
+print(add(3, 4))</div>
+
+    <h4>Parameters and Arguments</h4>
+    <div class="code">def greet(name):
+    print("Hello", name)
+
+greet("Aman")</div>
+
+    <h4>Return Values</h4>
+    <div class="code">def square(n):
+    return n * n
+
+result = square(5)
+print(result)  # 25</div>
+
+    <h4>Scope of Variables</h4>
+    <div class="code">x = 10  # global variable
+
+def show():
+    y = 20  # local variable
+    print(x)
+    print(y)
+
+show()</div>
+
+    <p>Global variables are accessible throughout the program, whereas local variables work inside a function only.</p>
+
+    <h4>Lambda Functions</h4>
+    <p>Lambda functions are short anonymous functions.</p>
+    <div class="code">square = lambda x: x * x
+print(square(4))</div>
+
+    <h4>Recursion</h4>
+    <p>A recursive function calls itself.</p>
+    <div class="code">def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))</div>
+
+    <p><strong>Important points:</strong></p>
+    <ul>
+      <li>Base case must exist</li>
+      <li>Function must move toward base case</li>
+      <li>It can be elegant but careful with infinite recursion</li>
+    </ul>
+
+    <h3>2.3 Python Modules</h3>
+    <p>A module is a Python file containing reusable code.</p>
+
+    <h4>Importing Modules</h4>
+    <div class="code">import math
+print(math.sqrt(25))</div>
+
+    <div class="code">from math import sqrt
+print(sqrt(25))</div>
+
+    <h4>Standard Library</h4>
+    <p>Python has a rich library of built-in modules.</p>
+    <ul>
+      <li>math</li>
+      <li>random</li>
+      <li>datetime</li>
+      <li>os</li>
+      <li>sys</li>
+    </ul>
+
+    <div class="code">import random
+print(random.randint(1, 10))</div>
+
+    <h4>pip</h4>
+    <p><strong>pip</strong> is used to install third-party Python packages.</p>
+    <div class="code">pip install pandas
+pip install numpy</div>
+
+    <h4>User-defined Modules</h4>
+    <div class="code"># file: calc.py
+def add(a, b):
+    return a + b</div>
+
+    <div class="code"># main.py
+import calc
+print(calc.add(10, 20))</div>
+
+    <h3>Important Flowchart: Decision Logic</h3>
+    <div class="flow">Start
+  ↓
+Read value
+  ↓
+Check condition
+  ├── True  → Execute Task A
+  └── False → Execute Task B
+  ↓
+End</div>
+
+    <h3>Important Flowchart: For Loop</h3>
+    <div class="flow">Start
+  ↓
+Initialize counter
+  ↓
+Check condition
+  ├── True  → Execute body
+  │            → Increase counter
+  │            → Repeat
+  └── False → Stop
+  ↓
+End</div>
+
+    <h3>Practice Examples</h3>
+    <h4>Example 1: Add two numbers</h4>
+    <div class="code">a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+sum = a + b
+print("Sum =", sum)</div>
+
+    <h4>Example 2: Check even/odd</h4>
+    <div class="code">num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")</div>
+
+    <h4>Example 3: Factorial using recursion</h4>
+    <div class="code">def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))</div>
+
+    <h4>Example 4: Default parameter</h4>
+    <div class="code">def greet(name="Student"):
+    print("Hello", name)
+
+greet()
+greet("Riya")</div>
+
+    <h3>Short Summary Table</h3>
+    <table>
+      <tr><th>Topic</th><th>Key Idea</th></tr>
+      <tr><td>Programming</td><td>Giving instructions to a computer</td></tr>
+      <tr><td>Algorithm</td><td>Step-by-step solution</td></tr>
+      <tr><td>Flowchart</td><td>Diagram of algorithm</td></tr>
+      <tr><td>Pseudocode</td><td>Simple logic in English-like form</td></tr>
+      <tr><td>Variable</td><td>Container storing data</td></tr>
+      <tr><td>Data Type</td><td>Type of value stored</td></tr>
+      <tr><td>Conditional</td><td>Decision making</td></tr>
+      <tr><td>Loop</td><td>Repeated execution</td></tr>
+      <tr><td>Function</td><td>Reusable block of code</td></tr>
+      <tr><td>Module</td><td>Saved Python file with code</td></tr>
+      <tr><td>Recursion</td><td>Function calling itself</td></tr>
+      <tr><td>Lambda</td><td>Short anonymous function</td></tr>
+    </table>
+
+    <h3>Exam Tips</h3>
+    <ul>
+      <li>Understand syntax before memorizing</li>
+      <li>Practice dry run for loops and conditions</li>
+      <li>Learn differences between for and while</li>
+      <li>Write algorithm before code</li>
+      <li>Revise flowchart symbols</li>
+      <li>Practice small programs regularly</li>
+    </ul>
+
+    <p class="note">Prepared for MCA examination in simple language with examples and explanations.</p>
+  </div>
+</body>
+</html>
